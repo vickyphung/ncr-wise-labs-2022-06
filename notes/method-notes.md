@@ -1,7 +1,9 @@
 //Array.splice method (3 arguments):
 
 1.start index - the index at which to start changing the array.
+
 2.delete count - how many elements should be deleted from the array.
+
 3. item - the item to add to the array.
 
 
