@@ -1,0 +1,57 @@
+body {
+	background-color: darksalmon;
+}
+
+#container {
+	display: flex;
+	border: 5px solid dimgray;
+	border-radius: 10px;
+	width: 200px;
+	height: 250px;
+	flex-wrap: wrap;
+	background-color: lightblue;
+	justify-content: space-around;
+	padding: 5px;
+	font-family: Helvetica;
+}
+.display {
+	display: flex;
+	width: 180px;
+	height: 30px;
+	border: 2px solid white;
+	border-radius: 8px;
+	background-color: lightgray;
+	margin-top: 10px;
+}
+
+.buttons {
+	display: flex;
+	border: 2px solid white;
+	border-radius: 10px;
+	width: 40px;
+	height: 20px;
+	justify-content: center;
+}
+
+#expression {
+	background-color: lavender;
+}
+
+/* FLEX
+ALIGN-ITEMS
+center
+top
+FLEX-DIRECTION
+default: row; 
+row
+column
+row-reverse
+row-column
+JUSTIFY-CONTENT
+default: flex-start;
+space-between
+space-around <-- *** good one
+space-evenly
+FLEX-WRAP
+*** Makes the divs show up nicely when changing window sizes 
+*/
