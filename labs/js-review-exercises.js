@@ -394,3 +394,6 @@ for(let i=0; i < turtles.length; i++){
 // Then round the number by using another Math method like Math.floor()or Math.ceil()or Math.round()
 
 
+let MAX = 100; function randomInteger() {  return Math.floor((Math.random() * MAX)); }
+
+module.exports = randomInteger; 
