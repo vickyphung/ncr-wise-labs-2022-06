@@ -18,8 +18,7 @@ document.querySelector('body').style.backgroundColor = 'red'
 //
 const favoriteThings =
 document.querySelectorAll('#favorite-things > li')
-document.querySelector('#favorite-things').removeChild(favori
-teThings[favoriteThings.length - 1])
+document.querySelector('#favorite-things').removeChild(favoriteThings[favoriteThings.length - 1])
 //
 document.querySelectorAll('.special-title').forEach((item) =>
 {
@@ -34,3 +33,4 @@ document.querySelector('#past-races').removeChild(item)
 })
 //
 const li = document.createElement('li')
+
