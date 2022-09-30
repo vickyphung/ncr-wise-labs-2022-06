@@ -4,7 +4,7 @@ import Main from './pages/Main';
 import Species from './pages/Species';
 import { useEffect, useState } from 'react';
 
-function App() {
+function App() { 
 
   const [fishList, setFishList] = useState([]);
 
