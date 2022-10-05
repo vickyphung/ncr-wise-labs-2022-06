@@ -1,7 +1,7 @@
-export default function  NavBar (props) {
+export default function  NewOrderPage (props) {
     return (
-      <nav>
-        <p>NavBar</p>
-      </nav>
+      <h1>
+        New Order Page
+      </h1>
       )
  };
