@@ -1,6 +1,9 @@
 import { useState } from "react"
+import {signUp} from '../utilities/users-service'
 
 export default function SignUpForm(props) {
+
+const [errorState, setErrorState]= useState("");
 
 
 //setting defaults 
@@ -17,13 +20,30 @@ const [disable, setDisable] = useState(formData.password !== formData.confirm)
     
 // const disable = formData.password !== formData.confirm;
 
-const handleSubmit = (event) => {
-    //prevents defautls beahvior
-    event.preventDefault();
-    //turns an object into a string
-    alert(JSON.stringify(formData));
-    console.log("Submitted")
-}
+// const handleSubmit = (event) => {
+//     //prevents defautls beahvior
+//     event.preventDefault();
+//     //turns an object into a string
+//     alert(JSON.stringify(formData));
+//     console.log("Submitted")
+// }
+
+
+const handleSubmit = async (evt) => {
+  // Prevent form from being submitted to the server
+  evt.preventDefault();
+  try {
+    const payload = {
+      // formData.email,
+      // formData.password,
+      // formData.name
+      } 
+      const user = await signUp(formData);
+} catch {
+    // An error occurred
+    setErrorState({ error: 'Sign Up Failed - Try Again' });
+  }
+};
 
 //e or event, all of the data regarding event that was triggered
 //all the data about that click
@@ -82,7 +102,7 @@ const handleChange = (event) => {
 
         </form>
       </div>
-      {/* <p className="error-message">&nbsp;{this.state.error}</p> */}
+      <p className="error-message">{errorState}</p>
     </div>
   )
 }
