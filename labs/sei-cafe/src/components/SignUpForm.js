@@ -17,7 +17,11 @@ const [disable, setDisable] = useState(formData.password !== formData.confirm)
     
 // const disable = formData.password !== formData.confirm;
 
-const handleSubmit = () => {
+const handleSubmit = (event) => {
+    //prevents defautls beahvior
+    event.preventDefault();
+    //turns an object into a string
+    alert(JSON.stringify(formData));
     console.log("Submitted")
 }
 
